@@ -2,11 +2,11 @@
 layout: post
 title: "R markdown"
 modified:
-categories: blog
+categories: blog R
 excerpt:
-tags: [rmarkdown, dummy_code]
+tags: [rmarkdown, dummy_code, R]
 image:
-  feature:
+  feature: feature_flower_3.jpg
 date: 2016-09-22T14:50:00+02:00
 author: malditobarbudo
 share: false
@@ -30,8 +30,20 @@ summary(cars)
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r pressure, echo=TRUE, fig.cap = "ggplot2 with ggthemes dot plot", fig.align='center', message=FALSE}
+library(ggplot2)
+library(ggthemes)
+library(dplyr)
+
+data(pressure)
+
+pressure %>%
+  ggplot(aes(x = temperature, y =  pressure, colour = temperature)) +
+  geom_point(size = 4, alpha = 0.8) +
+  viridis::scale_color_viridis(option = "A") +
+  theme_solarized(light = FALSE, base_size = 12, base_family = 'Inconsolata') +
+  theme(legend.position = 'top',
+        legend.direction = 'horizontal')
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Note that the `echo = TRUE` parameter was added to the code chunk.
