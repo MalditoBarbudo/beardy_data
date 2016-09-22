@@ -3,14 +3,14 @@
 - title: About
   url: /about/
 
-- title: Articles
-  url: /articles/
-
 - title: Blog
   url: /blog/
+
+- title: Shiny apps
+  url: http://www.malditobarbudo.xyz/shiny
 
 - title: Theme Setup
   url: /theme-setup/
 
-- title: Search
-  url: /search/
+# - title: Search
+#   url: /search/

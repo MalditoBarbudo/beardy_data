@@ -1,8 +1,8 @@
 // TYPOGRAPHY ================================================
-$base-font                : 'source-sans-pro', sans-serif;
+$base-font                : 'Raleway', sans-serif;
 $heading-font             : $base-font;
 $caption-font             : $base-font;
-$code-font                : 'source-code-pro', monospace;
+$code-font                : 'Inconsolata', monospace;
 $alt-font                 : 'volkhov', serif;
 
 $doc-font-size            : 16;
@@ -19,15 +19,15 @@ body {
 
 
 // COLORS =====================================================
-$body-color               : #fff;
-$text-color               : #222;
+$body-color               : #002b36;
+$text-color               : #839496;
 $base-color               : #343434;
 $comp-color               : adjust-hue($base-color, 180);
 $border-color             : #ddd;
-$white                    : #fff;
-$black                    : #000;
+$white                    : #eee8d5;
+$black                    : #657b83;
 $accent-color             : $black;
-$link-color               : #222;
+$link-color               : #d33682;
 
 $table-border-color       : $border-color;
 $table-border             : 1px solid $table-border-color;

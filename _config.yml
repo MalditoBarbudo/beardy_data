@@ -1,11 +1,12 @@
 # Site wide configuration
 
-title: Site Title
+title: When data grows a beard
 locale: en_US
-description: Describe your website here.
-logo: site-logo.png
+description: Because real data does not seem like in the examples section
+logo: site-logo.svg
 search: true
 url: http://localhost:4000
+# url: http://malditobarbudo.xyz
 
 # Jekyll configuration
 
@@ -31,18 +32,18 @@ kramdown:
 mathjax: true
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", ".less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", ".less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor", "beardy_data.Rproj"]
 
 
 # Site owner
 owner:
-  name: Your Name
-  avatar: bio-photo.jpg
-  email: you@email.com
+  name: MalditoBarbudo
+  avatar: bio-photo.png
+  email: victorgrandagarcia@gmail.com
   disqus-shortname:
-  twitter: #username
+  twitter: MalditoBarbudo
   facebook: #username
-  github: #username
+  github: MalditoBarbudo
   stackexchange: #http://stackoverflow.com/users/123456/username
   linkedin: #username
   instagram: #username
