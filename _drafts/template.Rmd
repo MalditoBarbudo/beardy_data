@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Title"
+modified:
+categories: blog R
+excerpt: "Excerpt for post list"
+tags: []
+image:
+  feature: feature_flower_2.jpg
+  credit: MalditoBarbudo [CC-BY 4.0]
+  creditlink: http://creativecommons.org/licenses/by/4.0/
+date: 2016-09-23T016:14:00+02:00
+author: malditobarbudo
+share: true
+comments: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      fig.width = 6, fig.height = 4.5, fig.align = 'center',
+                      out.width = '400px', out.height = '200px',
+                      dev = 'svglite', dev.args = list(bg = 'transparent'))
+library(extrafont)
+```
