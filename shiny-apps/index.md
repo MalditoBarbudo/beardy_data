@@ -7,4 +7,4 @@ image:
   feature: feature_flower_1.jpg
 ---
 
-# Shiny Apps:
+Shiny apps:
