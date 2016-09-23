@@ -131,12 +131,12 @@ above, but a summary is given:
 
 After executing `servr::jekyll()` a `_site` folder is created in the root of
 the project. This folder contains all the structure and the pages of
-the blog and can be exported to a web server in production mode.  
+the blog and can be pushed to a web server in production mode.  
 
 ## And that is all
 
 After the install and configuration now I only have to write an R markdown
-post and execute `servr::jekyll()`. After checking everithing is ok I can
+post and execute `servr::jekyll()`. After checking everything is ok I can
 push the `_site` folder to the server and the new post is online.  
-If want to pick a look to the code used to generate this site, you can find it
+If you want to pick a look to the code used to generate this site, you can find it
 [here](https://github.com/MalditoBarbudo/beardy_data).
