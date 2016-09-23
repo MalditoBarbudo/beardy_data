@@ -3,7 +3,7 @@ layout: post
 title: "Starting bars and histograms at zero in ggplot2"
 modified:
 categories: blog R
-excerpt:
+excerpt: "Get rid of the space between the data and the x axis in histograms and barplots created with ggplot2"
 tags: [R, ggplot2]
 image:
   feature: feature_insect_2.jpg
@@ -14,7 +14,7 @@ share: false
 
 
 
-When creating histograms or bar plots in `ggplot2` we found that the data is 
+When creating histograms or barplots in `ggplot2` we found that the data is 
 placed at some distance from the x axis, which means the y axis starts below zero:
 
 
@@ -62,7 +62,7 @@ scale_y_continuous(expand = c(0,0),
                    limits = c(0,30)) +
 ```
 
-This way we indicate to avoid the y axis expand, but we set (harcoded) the y max
+This way we indicate to avoid the y axis expand, but we set (harcode) the y max
 limit to allow for a gap above the data (the y max value depends on the count range,
 so you have to take a look at the plot first).  
 This way has some disadventages[^a]:
@@ -75,9 +75,9 @@ This way has some disadventages[^a]:
   
   + It does not play well with `free y` faceted plots.
 
-### Bar plots
+### Barplots
 
-For bar plots is the same:
+For barplots is the same:
 
 
 {% highlight r %}
