@@ -3,6 +3,10 @@ layout: page
 title: Blog
 excerpt: "An archive of blog posts sorted by date."
 search_omit: true
+image:
+  feature: feature_fungus_1.jpg
+  credit: MalditoBarbudo (CC-BY 4.0)
+  creditlink: http://creativecommons.org/licenses/by/4.0/
 ---
 
 <ul class="post-list">
