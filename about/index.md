@@ -2,7 +2,7 @@
 layout: page
 title:
 excerpt: "Plant biologist transformed to data analyst"
-modified: 2014-08-08T19:44:38.564948-04:00
+modified: 2016-09-22T19:44:38.564948+02:00
 image:
   feature:
 ---
