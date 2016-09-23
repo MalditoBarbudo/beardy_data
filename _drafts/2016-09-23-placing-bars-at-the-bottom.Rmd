@@ -7,9 +7,12 @@ excerpt: "Get rid of the space between the data and the x axis in histograms and
 tags: [R, ggplot2]
 image:
   feature: feature_insect_2.jpg
+  credit: MalditoBarbudo (CC-BY 4.0)
+  creditlink: http://creativecommons.org/licenses/by/4.0/
 date: 2016-09-23T016:14:00+02:00
 author: malditobarbudo
-share: false
+share: true
+comments: false
 ---
 
 ```{r setup, include=FALSE}

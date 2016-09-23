@@ -7,7 +7,7 @@ excerpt: "Excerpt for post list"
 tags: []
 image:
   feature: feature_flower_2.jpg
-  credit: MalditoBarbudo [CC-BY 4.0]
+  credit: MalditoBarbudo (CC-BY 4.0)
   creditlink: http://creativecommons.org/licenses/by/4.0/
 date: 2016-09-23T016:14:00+02:00
 author: malditobarbudo
