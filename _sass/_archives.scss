@@ -71,12 +71,16 @@
     float: left;
     @include font-size(14);
     line-height: 2.5;
+    
+    > a {
+      border-bottom-width: 0; /* remove underlines from tag boxes */
+    }
   }
 
   a {
     padding: 4px 6px;
     margin: 2px;
-    background-color: lighten($black, 90);
+    background-color: #073642;
     @include rounded(4px);
     text-decoration: none;
 
