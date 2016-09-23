@@ -30,12 +30,13 @@ ggplot(iris, aes(x = Petal.Length, fill = Species)) +
   theme_solarized(light = FALSE, base_family = 'Inconsolata')
 {% endhighlight %}
 
-<img src="/figure/source/2016-09-23-starting-bars-and-histograms-at-zero-in-ggplot2/gap_plot-1.png" title="Histogram with gap at the bottom" alt="Histogram with gap at the bottom" style="display: block; margin: auto;" />
+<img src="/figure/source/2016-09-23-starting-bars-and-histograms-at-zero-in-ggplot2/gap_plot-1.svg" title="Histogram with gap at the bottom" alt="Histogram with gap at the bottom" width="400px" height="200px" style="display: block; margin: auto;" />
 
-This is because, internally, `ggplot2` is expanding axis by a multiplicative
-or additive constant, see the `expand` parameter in `?scale_y_continuous` for
-details. This makes sense in almost all plots, except for the bar and histogram
-ones, as we see above.  
+This is because, internally, `ggplot2` is expanding x and y axes by a
+multiplicative or additive constant[^2]. This makes sense in almost all plots,
+except for the bar and histogram ones, as we see above.  
+
+[^2]: See the `expand` parameter in `?scale_y_continuous` for details
 
 ## Workaround
 
@@ -53,7 +54,7 @@ ggplot(iris, aes(x = Petal.Length, fill = Species)) +
   theme_solarized(light = FALSE, base_family = 'Inconsolata')
 {% endhighlight %}
 
-<img src="/figure/source/2016-09-23-starting-bars-and-histograms-at-zero-in-ggplot2/bottom_plot-1.png" title="Histogram without bottom gap" alt="Histogram without bottom gap" style="display: block; margin: auto;" />
+<img src="/figure/source/2016-09-23-starting-bars-and-histograms-at-zero-in-ggplot2/bottom_plot-1.svg" title="Histogram without bottom gap" alt="Histogram without bottom gap" width="400px" height="200px" style="display: block; margin: auto;" />
 
 As you can see, here we add the following layer to the `gpplot` call:
 
@@ -62,9 +63,9 @@ scale_y_continuous(expand = c(0,0),
                    limits = c(0,30)) +
 ```
 
-This way we indicate to avoid the y axis expand, but we set (harcode) the y max
-limit to allow for a gap above the data (the y max value depends on the count range,
-so you have to take a look at the plot first).  
+This way we avoid the y axis expand, but we need to set (harcode) the y max
+limit to allow for a space above the data (the y max value depends on the count
+range, so you have to take a look at the plot first).  
 This way has some disadventages[^a]:
 
 [^a]: It seems an asymmetrical expand argument is on its [way](https://github.com/hadley/ggplot2/issues/1669)
@@ -90,12 +91,12 @@ ggplot(iris, aes(x = Species, fill = Species)) +
   theme_solarized(light = FALSE, base_family = 'Inconsolata')
 {% endhighlight %}
 
-<img src="/figure/source/2016-09-23-starting-bars-and-histograms-at-zero-in-ggplot2/bar_plot-1.png" title="Bar plot without bottom gap" alt="Bar plot without bottom gap" style="display: block; margin: auto;" />
+<img src="/figure/source/2016-09-23-starting-bars-and-histograms-at-zero-in-ggplot2/bar_plot-1.svg" title="Bar plot without bottom gap" alt="Bar plot without bottom gap" width="400px" height="200px" style="display: block; margin: auto;" />
 
 
 ## Summary
 
-<img src="/figure/source/2016-09-23-starting-bars-and-histograms-at-zero-in-ggplot2/cowplot_summary-1.png" title="Summary plot. Default plot, without expand plot and without expand and limits plot" alt="Summary plot. Default plot, without expand plot and without expand and limits plot" style="display: block; margin: auto;" />
+<img src="/figure/source/2016-09-23-starting-bars-and-histograms-at-zero-in-ggplot2/cowplot_summary-1.svg" title="Summary plot. Default plot, without expand plot and without expand and limits plot" alt="Summary plot. Default plot, without expand plot and without expand and limits plot" width="600px" height="300px" style="display: block; margin: auto;" />
 
 As you can see, default plot adds a gap at both ends, up and down. Setting
 `expand` to zero removes both gaps, no ideal. Finally setting `expand` to zero and

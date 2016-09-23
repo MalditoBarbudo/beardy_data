@@ -13,7 +13,11 @@ share: false
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, fig.width = 6, fig.height = 4.5, fig.align = 'center')
+knitr::opts_chunk$set(echo = TRUE,
+                      fig.width = 6, fig.height = 4.5, fig.align = 'center',
+                      out.width = '400px', out.height = '200px',
+                      dev = 'svglite', dev.args = list(bg = 'transparent'))
+library(extrafont)
 ```
 
 When creating histograms or barplots in `ggplot2` we found that the data is 
@@ -31,10 +35,11 @@ ggplot(iris, aes(x = Petal.Length, fill = Species)) +
   theme_solarized(light = FALSE, base_family = 'Inconsolata')
 ```
 
-This is because, internally, `ggplot2` is expanding axis by a multiplicative
-or additive constant, see the `expand` parameter in `?scale_y_continuous` for
-details. This makes sense in almost all plots, except for the bar and histogram
-ones, as we see above.  
+This is because, internally, `ggplot2` is expanding x and y axes by a
+multiplicative or additive constant[^2]. This makes sense in almost all plots,
+except for the bar and histogram ones, as we see above.  
+
+[^2]: See the `expand` parameter in `?scale_y_continuous` for details
 
 ## Workaround
 
@@ -58,9 +63,9 @@ scale_y_continuous(expand = c(0,0),
                    limits = c(0,30)) +
 ```
 
-This way we indicate to avoid the y axis expand, but we set (harcode) the y max
-limit to allow for a gap above the data (the y max value depends on the count range,
-so you have to take a look at the plot first).  
+This way we avoid the y axis expand, but we need to set (harcode) the y max
+limit to allow for a space above the data (the y max value depends on the count
+range, so you have to take a look at the plot first).  
 This way has some disadventages[^a]:
 
 [^a]: It seems an asymmetrical expand argument is on its [way](https://github.com/hadley/ggplot2/issues/1669)
@@ -88,7 +93,7 @@ ggplot(iris, aes(x = Species, fill = Species)) +
 
 ## Summary
 
-```{r cowplot_summary, message=FALSE, fig.width = 12, fig.height=4.5, echo=FALSE, fig.cap="Summary plot. Default plot, without expand plot and without expand and limits plot"}
+```{r cowplot_summary, message=FALSE, fig.width = 12, fig.height=4.5, echo=FALSE, fig.cap="Summary plot. Default plot, without expand plot and without expand and limits plot", out.width='600px', out.height='300px'}
 # libraries
 library(cowplot)
 
