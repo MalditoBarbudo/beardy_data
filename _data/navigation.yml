@@ -6,6 +6,9 @@
 - title: Blog
   url: /blog/
 
+- title: Tags
+  url: /tags/
+
 - title: Shiny apps
   url: /shiny/
 

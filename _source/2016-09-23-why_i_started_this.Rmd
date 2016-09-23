@@ -4,7 +4,7 @@ title: "knitr + jekyll + so simple theme or Why I started this..."
 modified:
 categories: blog R
 excerpt:
-tags: [R jekyll so_simple_theme]
+tags: [R, jekyll, so_simple_theme]
 image:
   feature: feature_picos_1.jpg
 date: 2016-09-23T01:51:00+02:00
