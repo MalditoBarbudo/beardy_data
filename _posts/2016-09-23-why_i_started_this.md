@@ -7,6 +7,8 @@ excerpt:
 tags: [R, jekyll, so_simple_theme]
 image:
   feature: feature_picos_1.jpg
+  credit: MalditoBarbudo (CC-BY 4.0)
+  creditlink: http://creativecommons.org/licenses/by/4.0/
 date: 2016-09-23T01:51:00+02:00
 author: malditobarbudo
 share: false
